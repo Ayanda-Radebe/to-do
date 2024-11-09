@@ -11,6 +11,8 @@ const calendarIcon = document.getElementById('calendar-icon');
 const datePopup = document.getElementById('date-popup');
 const datePickerInput = document.getElementById('date-picker');
 const saveDateBtn = document.getElementById('save-date-btn');
+const closePopupBtn = document.getElementById('close-popup-btn');
+const selectedDateInput = document.getElementById('selected-date'); // Added
 let selectedDate;
 
 // Initialize flatpickr
@@ -28,8 +30,14 @@ calendarIcon.addEventListener('click', () => {
   fpInstance.open();
 });
 
-// Hide popup and calendar when Save button is clicked
-saveDateBtn.addEventListener('click', () => {
-  datePopup.style.display = 'none';
-  console.log(`Saved date: ${selectedDate}`);
+// Hide popup when Close button or Save button is clicked
+[closePopupBtn, saveDateBtn].forEach((btn) => {
+  btn.addEventListener('click', () => {
+    datePopup.style.display = 'none';
+    if (btn === saveDateBtn) {
+      const formattedSelectedDate = selectedDate.toLocaleDateString();
+      selectedDateInput.value = formattedSelectedDate; // Update selected date input
+      console.log(`Saved date: ${formattedSelectedDate}`);
+    }
+  });
 });

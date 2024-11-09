@@ -25,20 +25,39 @@
     <!-- Adding New Task Section -->
     <div class="add-task">
       <i class="fa-solid fa-plus"></i>
-      <input type="text" id="task-input" placeholder="Add new task" />
+      <input type="text" id="task-name" placeholder="Task Name" />
+    </div>
+    <div class="details-task">
+      <i class="fa-regular fa-clipboard"></i>
+      <input type="text" id="task-description" placeholder="Task Description" />
+    </div>
+
+    <div class="date-selected">
+        <i class="fa-solid fa-exclamation"></i>
+      <input type="text" id="selected-date" placeholder="Due Date" readonly />
+    </div>
+
+    <div class="time-selected">
+        <i class="fa-regular fa-clock"></i>
+      <input type="text" id="selected-time" placeholder="Pick Time" readonly />
     </div>
 
     <div class="task-options">
-      <i class="fa-regular fa-calendar" id="calendar-icon"></i>
-      <i class="fa-solid fa-bell"></i>
+      <i class="fa-regular fa-calendar-days" id="calendar-icon"></i>
+      <i class="fa-regular fa-bell"></i>
       <i class="fa-solid fa-repeat"></i>
     </div>
 
+    <!-- Calendar for due date -->
+
     <div id="date-popup" class="popup">
-        <h2>Pick a date</h2>
-        <input type="text" id="date-picker" />
-        <button id="save-date-btn">Save</button>
+      <div class="popup-header">
+        <h2>Pick Date</h2>
+        <button id="close-popup-btn">&times;</button>
       </div>
+      <input type="text" id="date-picker" />
+      <button id="save-date-btn">Save</button>
+    </div>
 
     <div id="task-list"></div>
 
