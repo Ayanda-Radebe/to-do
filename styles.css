@@ -3,13 +3,13 @@ body {
     background-color: #f0f0f0;
 }
 
+/* Date */
 
-/* Date Section */
 .container {
     position: absolute;
-    top: 10%;
+    top: 0%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, 0);
     text-align: center;
 }
 
@@ -22,8 +22,8 @@ h1 {
     font-size: 24px;
 }
 
-/* Adding New Task Section */
 
+/* Adding New Task Section */
 .add-task {
     position: absolute;
     top: 30%;
@@ -36,6 +36,7 @@ h1 {
 .add-task i {
     font-size: 24px;
     margin-right: 10px;
+    cursor: pointer;
 }
 
 #task-input {
@@ -45,10 +46,79 @@ h1 {
     width: 300px;
 }
 
+/* Task options (icon) */
+.task-options {
+    position: absolute;
+    top: 38%;
+    left: 25%;
+    transform: translate(-50%, 0);
+    display: flex;
+    justify-content: space-between;
+    width: 100px;
+}
+
+.task-options i {
+    font-size: 20px;
+    cursor: pointer;
+}
+
 #task-list {
     position: absolute;
-    top: 30%;
+    top: 35%;
     left: 50%;
     transform: translate(-50%, 0);
 }
 
+
+/* Popup for Date Picker */
+.popup {
+    position: absolute;
+    top: 50%;
+    left: 20%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 20px;
+    box-shadow: 0px 4px 8px rgba(223, 177, 177, 0.548);
+    border-radius: 8px;
+    display: none;
+    z-index: 1000;
+  }
+
+  .popup h2 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    text-align: center;
+    cursor: pointer; /* Add this line */
+  }
+
+  .flatpickr-calendar {
+    width: 2px; /* Adjust width */
+    font-size: 14px; /* Adjust font size */
+  }
+
+  .flatpickr-calendar .flatpickr-day {
+    height: 30px; /* Adjust day cell height */
+    width: 25px; /* Adjust day cell width */
+  }
+  
+  .flatpickr-calendar .flatpickr-weekdays {
+    font-size: 12px; /* Adjust weekday font size */
+  }
+  
+  .flatpickr-calendar .flatpickr-month {
+    font-size: 12px; /* Adjust month font size */
+  }
+
+  #save-date-btn {
+    margin-top: 10px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #4CAF50;
+    color: #fff;
+    cursor: pointer;
+  }
+  
+  #save-date-btn:hover {
+    background-color: #3e8e41;
+  }
