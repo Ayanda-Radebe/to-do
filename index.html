@@ -1,17 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>To-Do List</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+    />
+  </head>
+
+  <body>
+    <!-- Date section -->
     <div class="container">
-        <h1>Today</h1>
-        <p id="current-date"></p>
+      <h1>Today</h1>
+      <p id="current-date"></p>
     </div>
 
+    <!-- Adding New Task Section -->
+    <div class="add-task">
+      <i class="fa-solid fa-plus"></i>
+      <input type="text" id="task-input" placeholder="Add new task" />
+    </div>
+
+    <div id="task-list"></div>
+
     <script src="script.js"></script>
-</body>
+  </body>
 </html>
