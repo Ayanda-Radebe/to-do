@@ -33,18 +33,29 @@
     </div>
 
     <div class="date-selected">
-        <i class="fa-solid fa-exclamation" title="Pick Date"></i>
-        <input type="text" id="selected-date" placeholder="Due Date" title="Select date on Calendar" readonly />
-      </div>
+      <i class="fa-solid fa-exclamation" title="Pick Date"></i>
+      <input
+        type="text"
+        id="selected-date"
+        placeholder="Due Date"
+        title="Select date on Calendar"
+        readonly
+      />
+    </div>
     <!-- <div class="time-selected"> 
         <i class="fa-regular fa-clock"></i>
       <input type="text" id="selected-time" placeholder="Pick Time" readonly />
     </div>-->
 
     <div class="task-options">
-      <i class="fa-regular fa-calendar-days" id="calendar-icon"></i>
-      <i class="fa-regular fa-bell"></i>
-      <i class="fa-solid fa-repeat"></i>
+      <i
+        class="fa-regular fa-calendar-days"
+        id="calendar-icon"
+        title="Calendar"
+        readonly
+      ></i>
+      <i class="fa-regular fa-bell" title="Reminder" readonly></i>
+      <i class="fa-solid fa-repeat" title="Repeat" readonly></i>
     </div>
 
     <!-- Calendar for due date -->
@@ -59,6 +70,10 @@
     </div>
 
     <div id="task-list"></div>
+
+    <div class="add-task-btn">
+      <button id="add-task-btn">Add</button>
+    </div>
 
     <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
     <script src="script.js"></script>
