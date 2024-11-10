@@ -1,7 +1,11 @@
 body {
     font-family: Arial, sans-serif;
-    background-color: #f0f0f0;
-}
+    background-color: #f1cfbebb;
+    display: flex;
+    justify-content: space-between;
+    height: 100vh;
+    margin: 0;
+  }
 
 /* Date */
 
@@ -144,12 +148,7 @@ h1 {
     cursor: pointer;
 }
 
-#task-list {
-    position: absolute;
-    top: 35%;
-    left: 50%;
-    transform: translate(-50%, 0);
-}
+
 
 
 /* Popup for Date Picker */
@@ -246,3 +245,22 @@ h1 {
   #add-task-btn:hover {
     background-color: #3e8e41;
   }
+
+
+/* Sticky notes */
+  
+#task-list {
+    position: absolute;
+    top: 42%;
+    left: 60%;
+    transform: translate(0, -50%);
+    background-color: #ddd;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 250px;
+    max-height: 400px;
+    overflow-y: auto;
+  }
+
+

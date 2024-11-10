@@ -89,3 +89,4 @@ function displayTask(task) {
   `;
   taskList.appendChild(taskElement);
 }
+
