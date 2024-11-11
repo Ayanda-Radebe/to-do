@@ -253,7 +253,7 @@ h1 {
     position: absolute;
     top: 35%;
     right: 0;
-    background-color: #611f1f;
+    background-color: #eed0d0;
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -263,7 +263,6 @@ h1 {
   }
   
 .task {
-    background-color: #af88f8;
     padding: 10px;
     margin-bottom: 10px;
     border-radius: 5px;
