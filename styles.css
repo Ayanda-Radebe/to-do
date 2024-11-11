@@ -1,0 +1,296 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #dfbfafe8;
+    display: flex;
+    justify-content: space-between;
+    height: 100vh;
+    margin: 0;
+  }
+
+/* Date */
+
+.container {
+    position: absolute;
+    top: 0%;
+    left: 50%;
+    transform: translate(-50%, 0);
+    text-align: center;
+}
+
+h1 {
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+#current-date {
+    font-size: 24px;
+}
+
+
+/* Adding New Task Section */
+.add-task {
+    position: absolute;
+    top: 30%;
+    left: 25%;
+    transform: translate(-50%, 0);
+    display: flex;
+    align-items: center;
+}
+
+.details-task {
+    position: absolute;
+    top: 40%;
+    left: 25%;
+    transform: translate(-50%, 0);
+    display: flex;
+    align-items: center;
+}
+
+
+.add-task i {
+    font-size: 24px;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+#task-name {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    width: 300px;
+}
+
+#task-description {
+    padding: 10px;
+    height: 50px;
+    border: none;
+    border-radius: 5px;
+    width: 300px;
+}
+
+.details-task {
+    position: absolute;
+    top: 40%;
+    left: 25%;
+    transform: translate(-50%, 0);
+    display: flex;
+    align-items: center;
+}
+
+.details-task i{
+    font-size: 24px;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+#selected-date {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    width: 150px;
+}
+
+.date-selected {
+    position: absolute;
+    top: 55%;
+    left: 25%;
+    transform: translate(-50%, 0);
+    display: flex;
+    align-items: center;
+}
+
+.date-selected i{
+    font-size: 24px;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+
+
+/* #selected-time { 
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    width: 100px;
+}
+
+.time-selected{
+    position: absolute;
+    top: 55%;
+    left: 38%;
+    transform: translate(-50%, 0);
+    display: flex;
+    align-items: center;
+}
+
+.time-selected i{
+    font-size: 20px;
+    margin-right: 10px;
+    cursor: pointer;
+}*/
+
+
+
+
+/* Task options (icon) */
+.task-options {
+    position: absolute;
+    top: 65%;
+    left: 25%;
+    transform: translate(-50%, 0);
+    display: flex;
+    justify-content: space-between;
+    width: 100px;
+}
+
+.task-options i {
+    font-size: 20px;
+    cursor: pointer;
+}
+
+
+
+
+/* Popup for Date Picker */
+.popup {
+    position: absolute;
+    top: 50%;
+    left: 20%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 20px;
+    box-shadow: 0px 4px 8px rgba(223, 177, 177, 0.548);
+    border-radius: 8px;
+    display: none;
+    z-index: 1000;
+  }
+
+  .popup h2 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    text-align: center;
+    cursor: pointer; /* Add this line */
+  }
+
+  .flatpickr-calendar {
+    width: 2px; /* Adjust width */
+    font-size: 14px; /* Adjust font size */
+  }
+
+  .flatpickr-calendar .flatpickr-day {
+    height: 30px; /* Adjust day cell height */
+    width: 25px; /* Adjust day cell width */
+  }
+  
+  .flatpickr-calendar .flatpickr-weekdays {
+    font-size: 12px; /* Adjust weekday font size */
+  }
+  
+  .flatpickr-calendar .flatpickr-month {
+    font-size: 12px; /* Adjust month font size */
+  }
+
+  #save-date-btn {
+    margin-top: 10px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #4CAF50;
+    color: #fff;
+    cursor: pointer;
+  }
+  
+  #save-date-btn:hover {
+    background-color: #3e8e41;
+}
+
+  .popup-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+  
+  #close-popup-btn {
+    font-size: 20px;
+    cursor: pointer;
+    background: none;
+    border: none;
+    padding: 0;
+}
+  
+  #close-popup-btn:hover {
+    color: #ccc;
+}
+
+/* Add Button */
+
+.add-task-btn {
+    position: absolute;
+    top: 75%;
+    left: 25%;
+    transform: translate(-50%, 0);
+  }
+  
+  #add-task-btn {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #79604c;
+    color: #fff;
+    cursor: pointer;
+  }
+  
+  #add-task-btn:hover {
+    background-color: #c7ad81;
+  }
+
+
+/* Sticky notes */
+  
+#task-list {
+    position: absolute;
+    top: 35%;
+    right: 0;
+    background-color: #eed0d0;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 250px;
+    max-height: 400px;
+    overflow-y: auto;
+  }
+  
+.task {
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.05);
+  }
+  
+.task h3 {
+    font-size: 16px;
+    margin-top: 0;
+  }
+  
+.task p {
+    font-size: 14px;
+    margin-bottom: 10px;
+  }
+  
+.delete-btn {
+    background-color: #f44336;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    font-size: 12px;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  
+  .delete-btn:hover {
+    background-color: #e91e63;
+  }
+
+
