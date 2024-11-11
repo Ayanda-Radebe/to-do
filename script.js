@@ -44,6 +44,7 @@ calendarIcon.addEventListener('click', () => {
 
 // Get add task button element
 const addTaskBtn = document.getElementById('add-task-btn');
+const taskList = document.getElementById('task-list');
 
 // Setup event listener for add task button
 addTaskBtn.addEventListener('click', () => {
@@ -72,21 +73,35 @@ addTaskBtn.addEventListener('click', () => {
   document.getElementById('task-name').value = '';
   document.getElementById('task-description').value = '';
   document.getElementById('selected-date').value = '';
+
+  // Display task list
+  taskList.style.display = 'block';
 });
 
 // Function to display new task in task list
 function displayTask(task) {
-  // For now, just log the task to the console
-  console.log('New Task:', task);
-  
   // Create task list element
-  const taskList = document.getElementById('task-list');
   const taskElement = document.createElement('div');
+  taskElement.className = 'task';
   taskElement.innerHTML = `
     <h3>${task.name}</h3>
     <p>${task.description}</p>
     <p>Due Date: ${task.dueDate}</p>
+    <button class="delete-btn">Delete</button>
   `;
+
+// Delete task functionality
+taskElement.querySelector('.delete-btn').addEventListener('click', () => {
+  taskElement.remove();
+
+  // Hide task list if no tasks remain
+  if (taskList.children.length === 0) {
+    taskList.style.display = 'none';
+  }
+});
+
   taskList.appendChild(taskElement);
 }
 
+// Hide task list by default
+taskList.style.display = 'none';
