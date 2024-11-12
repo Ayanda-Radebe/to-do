@@ -8,7 +8,6 @@ body {
   }
 
 /* Date */
-
 .container {
     position: absolute;
     top: 0%;
@@ -25,6 +24,111 @@ h1 {
 #current-date {
     font-size: 24px;
 }
+
+/* ******************************************************************************** */
+/* Paper effect container */
+.paper-container {
+  position: relative;
+  width: 25%; /* Adjust width to cover left side */
+  height: 60%;
+  background: #fdfaf3;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  margin-right: auto;
+  margin-left: 20px;
+  top: 25%;
+}
+
+/* Cellotape effect on corners */
+.cellotape {
+  position: absolute;
+  width: 60px;
+  height: 20px;
+  background: rgba(255, 255, 255, 0.7);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  z-index: 10;
+}
+
+.cellotape.top-left {
+  top: -10px;
+  left: -10px;
+  transform: rotate(-15deg);
+}
+
+.cellotape.top-right {
+  top: -10px;
+  right: -10px;
+  transform: rotate(15deg);
+}
+
+.cellotape.bottom-left {
+  bottom: -10px;
+  left: -10px;
+  transform: rotate(15deg);
+}
+
+.cellotape.bottom-right {
+  bottom: -10px;
+  right: -10px;
+  transform: rotate(-15deg);
+}
+
+/* Content inside the paper effect */
+/* Paper effect container */
+.paper-container {
+  position: relative;
+  width: 25%; 
+  height: 60%;
+  background: #fdfaf3;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  margin-right: auto;
+  margin-left: 10%;
+
+}
+
+/* Cellotape effect on corners */
+.cellotape {
+  position: absolute;
+  width: 60px;
+  height: 20px;
+  background: rgba(255, 255, 255, 0.7);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  z-index: 10;
+}
+
+.cellotape.top-left {
+  top: -10px;
+  left: -10px;
+  transform: rotate(-15deg);
+}
+
+.cellotape.top-right {
+  top: -10px;
+  right: -10px;
+  transform: rotate(15deg);
+}
+
+.cellotape.bottom-left {
+  bottom: -10px;
+  left: -10px;
+  transform: rotate(15deg);
+}
+
+.cellotape.bottom-right {
+  bottom: -10px;
+  right: -10px;
+  transform: rotate(-15deg);
+}
+
+/* Content inside the paper effect */
+.paper-content {
+  padding: 10px;
+}
+
+/* **************************************** */
 
 
 /* Adding New Task Section */
