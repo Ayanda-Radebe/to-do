@@ -235,7 +235,7 @@ h1 {
 .task-options {
     position: absolute;
     top: 65%;
-    left: 25%;
+    left: 50%;
     transform: translate(-50%, 0);
     display: flex;
     justify-content: space-between;
@@ -294,7 +294,7 @@ h1 {
     padding: 10px 20px;
     border: none;
     border-radius: 5px;
-    background-color: #4CAF50;
+    background-color: #f1c18adc;
     color: #fff;
     cursor: pointer;
   }
