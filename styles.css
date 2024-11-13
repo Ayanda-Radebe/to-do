@@ -68,48 +68,13 @@ h1 {
   position: relative;
   width: 25%; 
   height: 60%;
-  background: #fdfaf3;
+  background: #f3f0eaea;
   border-radius: 10px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
   padding: 20px;
   margin-right: auto;
   margin-left: 10%;
   top: 25%;
-
-}
-
-/* Cellotape effect on corners */
-.cellotape {
-  position: absolute;
-  width: 80px;
-  height: 20px;
-  background: rgba(255, 255, 255, 0.7);
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
-  z-index: 10;
-}
-
-.cellotape.top-left {
-  top: -10px;
-  left: -10px;
-  transform: rotate(-15deg);
-}
-
-.cellotape.top-right {
-  top: -10px;
-  right: -10px;
-  transform: rotate(15deg);
-}
-
-.cellotape.bottom-left {
-  bottom: -10px;
-  left: -10px;
-  transform: rotate(15deg);
-}
-
-.cellotape.bottom-right {
-  bottom: -10px;
-  right: -10px;
-  transform: rotate(-15deg);
 }
 
 /* Content inside the paper effect */
@@ -119,135 +84,86 @@ h1 {
 
 /* **************************************** */
 
-
-/* Adding New Task Section */
-
-/* ****** TASK NAME  *******/
-.add-task {
-    position: absolute;
-    top: 25%;
-    left: 48%;
-    transform: translate(-50%, 0);
-    display: flex;
-    align-items: center;
-}
-
-.details-task {
-    position: absolute;
-    top: 40%;
-    left: 25%;
-    transform: translate(-50%, 0);
-    display: flex;
-    align-items: center;;
-}
-
-
-.add-task i {
-    font-size: 24px;
-    margin-right: 10px;
-    cursor: pointer;
-}
-
-#task-name {
-    padding: 10px;
-    border: none;
-    border-radius: 5px;
-    width: 300px;
-    background-color: rgba(255, 228, 196, 0.644);
-}
-
-#task-description {
-    padding: 10px;
-    height: 50px;
-    border: none;
-    border-radius: 5px;
-    width: 300px;
-    background-color: rgba(255, 228, 196, 0.644);
-}
-
-.details-task {
-    position: absolute;
-    top: 35%;
-    left: 48%;
-    transform: translate(-50%, 0);
-    display: flex;
-    align-items: center;
-}
-
-.details-task i{
-    font-size: 24px;
-    margin-right: 10px;
-    cursor: pointer;
-}
-
-#selected-date {
-    padding: 10px;
-    border: none;
-    border-radius: 5px;
-    width: 150px;
-    background-color: rgba(255, 228, 196, 0.644);
-    
-}
-
-.date-selected {
-    position: absolute;
-    top: 52%;
-    left: 48%;
-    transform: translate(-50%, 0);
-    display: flex;
-    align-items: center;
-}
-
-.date-selected i{
-  font-size: 24px;
-  margin-right: 10px;
-  cursor: pointer;
-}
-
-
-
-/* #selected-time { 
-    padding: 10px;
-    border: none;
-    border-radius: 5px;
-    width: 100px;
-}
-
-.time-selected{
-    position: absolute;
-    top: 55%;
-    left: 38%;
-    transform: translate(-50%, 0);
-    display: flex;
-    align-items: center;
-}
-
-.time-selected i{
-    font-size: 20px;
-    margin-right: 10px;
-    cursor: pointer;
-}*/
-
-
-
-
-/* Task options (icon) */
-.task-options {
-    position: absolute;
-    top: 65%;
-    left: 50%;
-    transform: translate(-50%, 0);
-    display: flex;
-    justify-content: space-between;
-    width: 100px;
+/* Task Icons */
+.task-options{
+  position: relative;
+  left: 45%;
+  transform: translate(-50%, 0);
+  display: flex;
+  justify-content: space-between;
+  width: 100px;
 }
 
 .task-options i {
     font-size: 20px;
     cursor: pointer;
+    gap: 100px;
 }
 
+.task-options i:hover{
+  color: rgba(192, 122, 25, 0.651);
+}
 
+/* //////////////////////////////////////////////// */
+
+.task-container{
+  margin-top: 20%;
+}
+.add-task, .details-task, .date-selected {
+  position: relative; 
+  width: 90%; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 10px;
+  gap: 10px; 
+  margin: 20px
+
+}
+
+#task-name {
+  width: 60%;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+}
+
+#task-description {
+  width: 60%;
+  padding: 20px;
+  border: none;
+  border-radius: 5px;
+}
+
+#selected-date{
+  width: 40%;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+} 
+
+/* Add Button */
+
+#add-task-btn {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  background-color: #79604c;
+  color: #fff;
+  cursor: pointer;
+}
+
+.add-task-btn {
+  position: fixed;
+  top: 75%;
+  left: 23%;
+  transform: translate(-50%, 0);
+}
+
+.add-task-btn:hover{
+  background: #79604c;
+  
+}
 
 
 /* Popup for Date Picker */
@@ -268,25 +184,25 @@ h1 {
     font-size: 18px;
     margin-bottom: 10px;
     text-align: center;
-    cursor: pointer; /* Add this line */
+    cursor: pointer; 
   }
 
   .flatpickr-calendar {
-    width: 2px; /* Adjust width */
-    font-size: 14px; /* Adjust font size */
+    width: 2px; 
+    font-size: 14px;
   }
 
   .flatpickr-calendar .flatpickr-day {
-    height: 30px; /* Adjust day cell height */
-    width: 25px; /* Adjust day cell width */
+    height: 30px;
+    width: 25px; 
   }
   
   .flatpickr-calendar .flatpickr-weekdays {
-    font-size: 12px; /* Adjust weekday font size */
+    font-size: 12px;
   }
   
   .flatpickr-calendar .flatpickr-month {
-    font-size: 12px; /* Adjust month font size */
+    font-size: 12px; 
   }
 
   #save-date-btn {
@@ -323,28 +239,6 @@ h1 {
   #close-popup-btn:hover {
     color: #ccc;
 }
-
-/* Add Button */
-
-.add-task-btn {
-    position: absolute;
-    top: 75%;
-    left: 49%;
-    transform: translate(-50%, 0);
-  }
-  
-  #add-task-btn {
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    background-color: #79604c;
-    color: #fff;
-    cursor: pointer;
-  }
-  
-  #add-task-btn:hover {
-    background-color: #c7ad81;
-  }
 
 
 /* Sticky notes */
