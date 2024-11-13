@@ -295,12 +295,13 @@ h1 {
     border: none;
     border-radius: 5px;
     background-color: #f1c18adc;
-    color: #fff;
+    color: #000000;
     cursor: pointer;
   }
   
   #save-date-btn:hover {
-    background-color: #3e8e41;
+    background-color: #79604c;
+    color: white;
 }
 
   .popup-header {
@@ -328,7 +329,7 @@ h1 {
 .add-task-btn {
     position: absolute;
     top: 75%;
-    left: 25%;
+    left: 49%;
     transform: translate(-50%, 0);
   }
   
