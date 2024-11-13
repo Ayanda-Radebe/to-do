@@ -121,10 +121,12 @@ h1 {
 
 
 /* Adding New Task Section */
+
+/* ****** TASK NAME  *******/
 .add-task {
     position: absolute;
-    top: 30%;
-    left: 45%;
+    top: 25%;
+    left: 48%;
     transform: translate(-50%, 0);
     display: flex;
     align-items: center;
@@ -160,12 +162,13 @@ h1 {
     border: none;
     border-radius: 5px;
     width: 300px;
+    background-color: rgba(255, 228, 196, 0.644);
 }
 
 .details-task {
     position: absolute;
-    top: 40%;
-    left: 25%;
+    top: 35%;
+    left: 48%;
     transform: translate(-50%, 0);
     display: flex;
     align-items: center;
@@ -182,21 +185,23 @@ h1 {
     border: none;
     border-radius: 5px;
     width: 150px;
+    background-color: rgba(255, 228, 196, 0.644);
+    
 }
 
 .date-selected {
     position: absolute;
-    top: 55%;
-    left: 25%;
+    top: 52%;
+    left: 48%;
     transform: translate(-50%, 0);
     display: flex;
     align-items: center;
 }
 
 .date-selected i{
-    font-size: 24px;
-    margin-right: 10px;
-    cursor: pointer;
+  font-size: 24px;
+  margin-right: 10px;
+  cursor: pointer;
 }
 
 
