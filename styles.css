@@ -26,19 +26,7 @@ h1 {
 }
 
 /* ******************************************************************************** */
-/* Paper effect container */
-.paper-container {
-  position: relative;
-  width: 25%; /* Adjust width to cover left side */
-  height: 60%;
-  background: #fdfaf3;
-  border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-  padding: 20px;
-  margin-right: auto;
-  margin-left: 20px;
-  top: 25%;
-}
+
 
 /* Cellotape effect on corners */
 .cellotape {
@@ -86,6 +74,7 @@ h1 {
   padding: 20px;
   margin-right: auto;
   margin-left: 10%;
+  top: 25%;
 
 }
 
@@ -135,7 +124,7 @@ h1 {
 .add-task {
     position: absolute;
     top: 30%;
-    left: 25%;
+    left: 45%;
     transform: translate(-50%, 0);
     display: flex;
     align-items: center;
@@ -147,7 +136,7 @@ h1 {
     left: 25%;
     transform: translate(-50%, 0);
     display: flex;
-    align-items: center;
+    align-items: center;;
 }
 
 
@@ -162,6 +151,7 @@ h1 {
     border: none;
     border-radius: 5px;
     width: 300px;
+    background-color: rgba(255, 228, 196, 0.644);
 }
 
 #task-description {
