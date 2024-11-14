@@ -87,7 +87,7 @@ h1 {
 /* Task Icons */
 .task-options{
   position: relative;
-  left: 45%;
+  left: 52%;
   transform: translate(-50%, 0);
   display: flex;
   justify-content: space-between;
@@ -100,16 +100,13 @@ h1 {
     gap: 100px;
 }
 
-.task-options i:hover{
-  color: rgba(192, 122, 25, 0.651);
-}
-
 /* //////////////////////////////////////////////// */
 
 .task-container{
-  margin-top: 20%;
+  margin-top: 25%;
 }
-.add-task, .details-task, .date-selected {
+
+.add-task {
   position: relative; 
   width: 90%; 
   display: flex;
@@ -117,9 +114,33 @@ h1 {
   align-items: center;
   margin-bottom: 10px;
   gap: 10px; 
-  margin: 20px
-
+  margin: 20px;
 }
+
+.details-task {
+  position: relative; 
+  width: 90%; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 10px;
+  gap: 10px; 
+  margin: 20px;
+}
+
+ .date-selected {
+  position: relative; 
+  width: 90%; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 10px;
+  gap: 10px; 
+  margin: 20px;
+  left: 5px;
+}
+
+
 
 #task-name {
   width: 60%;
@@ -130,9 +151,10 @@ h1 {
 
 #task-description {
   width: 60%;
-  padding: 20px;
+  padding: 10px;
   border: none;
   border-radius: 5px;
+
 }
 
 #selected-date{
@@ -155,8 +177,8 @@ h1 {
 
 .add-task-btn {
   position: fixed;
-  top: 75%;
-  left: 23%;
+  top: 70%;
+  left: 24%;
   transform: translate(-50%, 0);
 }
 
