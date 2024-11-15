@@ -8,7 +8,6 @@ body {
   }
 
 /* Date */
-
 .container {
     position: absolute;
     top: 0%;
@@ -26,129 +25,167 @@ h1 {
     font-size: 24px;
 }
 
+/* ******************************************************************************** */
 
-/* Adding New Task Section */
-.add-task {
-    position: absolute;
-    top: 30%;
-    left: 25%;
-    transform: translate(-50%, 0);
-    display: flex;
-    align-items: center;
+
+/* Cellotape effect on corners */
+.cellotape {
+  position: absolute;
+  width: 60px;
+  height: 20px;
+  background: rgba(255, 255, 255, 0.7);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  z-index: 10;
 }
 
-.details-task {
-    position: absolute;
-    top: 40%;
-    left: 25%;
-    transform: translate(-50%, 0);
-    display: flex;
-    align-items: center;
+.cellotape.top-left {
+  top: -10px;
+  left: -10px;
+  transform: rotate(-15deg);
 }
 
-
-.add-task i {
-    font-size: 24px;
-    margin-right: 10px;
-    cursor: pointer;
+.cellotape.top-right {
+  top: -10px;
+  right: -10px;
+  transform: rotate(15deg);
 }
 
-#task-name {
-    padding: 10px;
-    border: none;
-    border-radius: 5px;
-    width: 300px;
+.cellotape.bottom-left {
+  bottom: -10px;
+  left: -10px;
+  transform: rotate(15deg);
 }
 
-#task-description {
-    padding: 10px;
-    height: 50px;
-    border: none;
-    border-radius: 5px;
-    width: 300px;
+.cellotape.bottom-right {
+  bottom: -10px;
+  right: -10px;
+  transform: rotate(-15deg);
 }
 
-.details-task {
-    position: absolute;
-    top: 40%;
-    left: 25%;
-    transform: translate(-50%, 0);
-    display: flex;
-    align-items: center;
+/* Content inside the paper effect */
+/* Paper effect container */
+.paper-container {
+  position: relative;
+  width: 25%; 
+  height: 60%;
+  background: #f3f0eaea;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  margin-right: auto;
+  margin-left: 10%;
+  top: 25%;
 }
 
-.details-task i{
-    font-size: 24px;
-    margin-right: 10px;
-    cursor: pointer;
+/* Content inside the paper effect */
+.paper-content {
+  padding: 10px;
 }
 
-#selected-date {
-    padding: 10px;
-    border: none;
-    border-radius: 5px;
-    width: 150px;
-}
+/* **************************************** */
 
-.date-selected {
-    position: absolute;
-    top: 55%;
-    left: 25%;
-    transform: translate(-50%, 0);
-    display: flex;
-    align-items: center;
-}
-
-.date-selected i{
-    font-size: 24px;
-    margin-right: 10px;
-    cursor: pointer;
-}
-
-
-
-/* #selected-time { 
-    padding: 10px;
-    border: none;
-    border-radius: 5px;
-    width: 100px;
-}
-
-.time-selected{
-    position: absolute;
-    top: 55%;
-    left: 38%;
-    transform: translate(-50%, 0);
-    display: flex;
-    align-items: center;
-}
-
-.time-selected i{
-    font-size: 20px;
-    margin-right: 10px;
-    cursor: pointer;
-}*/
-
-
-
-
-/* Task options (icon) */
-.task-options {
-    position: absolute;
-    top: 65%;
-    left: 25%;
-    transform: translate(-50%, 0);
-    display: flex;
-    justify-content: space-between;
-    width: 100px;
+/* Task Icons */
+.task-options{
+  position: relative;
+  left: 52%;
+  transform: translate(-50%, 0);
+  display: flex;
+  justify-content: space-between;
+  width: 100px;
 }
 
 .task-options i {
     font-size: 20px;
     cursor: pointer;
+    gap: 100px;
+}
+
+/* //////////////////////////////////////////////// */
+
+.task-container{
+  margin-top: 25%;
+}
+
+.add-task {
+  position: relative; 
+  width: 90%; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 10px;
+  gap: 10px; 
+  margin: 20px;
+}
+
+.details-task {
+  position: relative; 
+  width: 90%; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 10px;
+  gap: 10px; 
+  margin: 20px;
+}
+
+ .date-selected {
+  position: relative; 
+  width: 90%; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 10px;
+  gap: 10px; 
+  margin: 20px;
+  left: 5px;
 }
 
 
+
+#task-name {
+  width: 60%;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+}
+
+#task-description {
+  width: 60%;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+
+}
+
+#selected-date{
+  width: 40%;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+} 
+
+/* Add Button */
+
+#add-task-btn {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  background-color: #79604c;
+  color: #fff;
+  cursor: pointer;
+}
+
+.add-task-btn {
+  position: fixed;
+  top: 70%;
+  left: 24%;
+  transform: translate(-50%, 0);
+}
+
+.add-task-btn:hover{
+  background: #79604c;
+  
+}
 
 
 /* Popup for Date Picker */
@@ -169,25 +206,25 @@ h1 {
     font-size: 18px;
     margin-bottom: 10px;
     text-align: center;
-    cursor: pointer; /* Add this line */
+    cursor: pointer; 
   }
 
   .flatpickr-calendar {
-    width: 2px; /* Adjust width */
-    font-size: 14px; /* Adjust font size */
+    width: 2px; 
+    font-size: 14px;
   }
 
   .flatpickr-calendar .flatpickr-day {
-    height: 30px; /* Adjust day cell height */
-    width: 25px; /* Adjust day cell width */
+    height: 30px;
+    width: 25px; 
   }
   
   .flatpickr-calendar .flatpickr-weekdays {
-    font-size: 12px; /* Adjust weekday font size */
+    font-size: 12px;
   }
   
   .flatpickr-calendar .flatpickr-month {
-    font-size: 12px; /* Adjust month font size */
+    font-size: 12px; 
   }
 
   #save-date-btn {
@@ -195,13 +232,14 @@ h1 {
     padding: 10px 20px;
     border: none;
     border-radius: 5px;
-    background-color: #4CAF50;
-    color: #fff;
+    background-color: #f1c18adc;
+    color: #000000;
     cursor: pointer;
   }
   
   #save-date-btn:hover {
-    background-color: #3e8e41;
+    background-color: #79604c;
+    color: white;
 }
 
   .popup-header {
@@ -223,28 +261,6 @@ h1 {
   #close-popup-btn:hover {
     color: #ccc;
 }
-
-/* Add Button */
-
-.add-task-btn {
-    position: absolute;
-    top: 75%;
-    left: 25%;
-    transform: translate(-50%, 0);
-  }
-  
-  #add-task-btn {
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    background-color: #79604c;
-    color: #fff;
-    cursor: pointer;
-  }
-  
-  #add-task-btn:hover {
-    background-color: #c7ad81;
-  }
 
 
 /* Sticky notes */
@@ -294,3 +310,32 @@ h1 {
   }
 
 
+/* Edit Button */
+
+.edit-btn {
+    background-color: #03a9f4;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    font-size: 12px;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  
+  .edit-btn:hover {
+    background-color: #007ac1;
+  }
+  
+  .save-btn {
+    background-color: #8bc34a;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    font-size: 12px;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  
+  .save-btn:hover {
+    background-color: #5c9210;
+  }

@@ -84,21 +84,49 @@ function displayTask(task) {
   const taskElement = document.createElement('div');
   taskElement.className = 'task';
   taskElement.innerHTML = `
-    <h3>${task.name}</h3>
-    <p>${task.description}</p>
+    <h3 contenteditable="false">${task.name}</h3>
+    <p contenteditable="false">${task.description}</p>
     <p>Due Date: ${task.dueDate}</p>
     <button class="delete-btn">Delete</button>
+    <button class="edit-btn">Edit</button>
+    <button class="save-btn" style="display: none;">Save</button>
   `;
 
-// Delete task functionality
-taskElement.querySelector('.delete-btn').addEventListener('click', () => {
-  taskElement.remove();
+  // Delete task functionality
+  taskElement.querySelector('.delete-btn').addEventListener('click', () => {
+    taskElement.remove();
 
-  // Hide task list if no tasks remain
-  if (taskList.children.length === 0) {
-    taskList.style.display = 'none';
-  }
-});
+    // Hide task list if no tasks remain
+    if (taskList.children.length === 0) {
+      taskList.style.display = 'none';
+    }
+  });
+
+  // Edit task functionality
+  taskElement.querySelector('.edit-btn').addEventListener('click', () => {
+    // Make text editable
+    taskElement.querySelector('h3').contentEditable = 'true';
+    taskElement.querySelector('p').contentEditable = 'true';
+
+    // Show Save button, hide Edit button
+    taskElement.querySelector('.edit-btn').style.display = 'none';
+    taskElement.querySelector('.save-btn').style.display = 'inline';
+  });
+
+  // Save task functionality
+  taskElement.querySelector('.save-btn').addEventListener('click', () => {
+    // Update task object
+    task.name = taskElement.querySelector('h3').textContent;
+    task.description = taskElement.querySelector('p').textContent;
+
+    // Make text non-editable
+    taskElement.querySelector('h3').contentEditable = 'false';
+    taskElement.querySelector('p').contentEditable = 'false';
+
+    // Show Edit button, hide Save button
+    taskElement.querySelector('.edit-btn').style.display = 'inline';
+    taskElement.querySelector('.save-btn').style.display = 'none';
+  });
 
   taskList.appendChild(taskElement);
 }
